@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'config';
+
+// Component.
+@import 'hero';
+@import 'content';
+@import 'card';
+@import 'createForm';
+@import 'editForm';
+@import 'limitForm';
+
+
+body {
+    font-family: $font;
+}
+
+.App {
+    height: 70vh;
+    background: $hero-gradient;
+}
+
+
+.show-date-field {
+    display: block;
+}
+
+.hide-date-field {
+    display: none;
+}

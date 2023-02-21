@@ -1,0 +1,13 @@
+.content-wrapper {
+    .content-container {
+        .accordion-container {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1, 1);
+            transform-origin: top;
+        }
+
+        .accordion-hide {
+            transform: scale(1, 0);
+        }
+    }
+}
