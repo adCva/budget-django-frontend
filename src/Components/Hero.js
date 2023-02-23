@@ -10,8 +10,8 @@ function Hero() {
     const totalLimit = useSelector((state) => state.limit.totalLimit);
     const reamaningDaysLimit = useSelector((state) => state.limit.remainingDays)
     const expendituresData = useSelector((state) => state.expenditures.expData);
-
     const getTotalSpentSum = expendituresData.map(el => el.spent).reduce((a, b) => Number(a) + Number(b), 0);
+    
 
     return (
         <div className='hero-wrapper'>
@@ -27,7 +27,7 @@ function Hero() {
                 <div className='hero-group'>
 
                     <div className='hero-text'>
-                        <p className='user-greet'>Hello Obi-Wan Kenobi</p>
+                        <p className='user-greet'>Hello, Obi-Wan Kenobi</p>
                         <h1><span>Total Spent:</span> $ {getTotalSpentSum.toLocaleString('en')}</h1>
                         <h4>Your Desired Spending Limit: $ {totalLimit}</h4>
                         <h5>{isNaN(reamaningDaysLimit) ? 'No Time Limit Selected' : `${reamaningDaysLimit} Days Left`} </h5>

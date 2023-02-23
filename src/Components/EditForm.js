@@ -45,11 +45,11 @@ function EditForm() {
 
     
     return (
-        <div className={isEditStarted ? "edit-form-wrapper" : "edit-form-wrapper hide-edit-form-wrapper"}>
+        <div className={isEditStarted ? "form-wrapper" : "form-wrapper form-wrapper-show"}>
             <div className='form-container'>
 
                 {/* ======================= Form ======================= */}
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="form">
 
                     {/* ======================= Form Group ======================= */}
                     <div className='form-group'>
@@ -81,11 +81,11 @@ function EditForm() {
                         </select>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" className='update-btn'>Update</button>
 
                 </form>
 
-                <button onClick={() => dispatch(closeEdit())}>Close form</button>
+                <button onClick={() => dispatch(closeEdit())} className="close-form">Close form</button>
             </div>
         </div>
     )

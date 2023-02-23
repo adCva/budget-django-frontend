@@ -13,8 +13,9 @@ function Content() {
   const accordion = useSelector((state) => state.globalVar.accordionOpened);
   const filterBy = useSelector((state) => state.globalVar.filterBy);
   const expendituresData = useSelector((state) => state.expenditures.expData);
-  const alwaysDisplay = expendituresData.slice(0, 3);
-  const accordionDisplay = expendituresData.slice(3, expendituresData.length)
+  const expendituresDataReverse = [...expendituresData].reverse();
+  const alwaysDisplay = expendituresDataReverse.slice(0, 3);
+  const accordionDisplay = expendituresDataReverse.slice(3, expendituresData.length)
 
   
   const dispatchFilter = (value) => {
@@ -47,7 +48,7 @@ function Content() {
 
             {/* =========== Accordion wrapper =========== */}
             <div className='accordion-wrapper'>
-              <button className={filterBy !== "All" ? "hide-accorion-btn" : "show-accorion-btn"} onClick={() => dispatch(openAccordion({accordion: !accordion}))}>View full list {accordion ? <FiChevronUp /> : <FiChevronDown />}</button>
+              <button className={filterBy !== "All" ? "accorion-btn hide-accorion-btn" : "accorion-btn"} onClick={() => dispatch(openAccordion({accordion: !accordion}))}>View full list {accordion ? <FiChevronUp /> : <FiChevronDown />}</button>
               <div className={accordion ? "accordion-container" : "accordion-container accordion-hide"}>
                 {accordionDisplay.map((el, i) => {
                   return (

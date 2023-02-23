@@ -1,43 +1,63 @@
 .content-wrapper {
-    margin-top: 2rem;
+    margin-top: -3rem;
 
     @media (min-width: $tablet-break) {
-        margin-top: -4rem;
+        margin-top: -6rem;
     }
 
 
+    // ===================== Main Container.
     .content-container {
         width: 90%;
-        max-width: 1100px;
+        max-width: 700px;
         margin: 0 auto;
-        
-        .filters-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
 
-            @media (min-width: 768px) {
-                display: flex;
-                justify-content: space-between;
-            }
+
+        // ===================== Filters Container.
+        .filters-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 550px;
+            margin: 0 auto 2rem;
 
             button {
-                @extend %button;
-                padding: 0.4rem;
+                background: transparent;
+                color: $white;
+                cursor: pointer;
+                transition: $transition;
+
+                &:hover {
+                    color: $gray;
+                }
             }
         }
 
-        .expenses-container {
 
-        }
-
+        // ===================== Accorion Wrapper & Btn.
         .accordion-wrapper {
+            // ========= Show more btn.
+            .accorion-btn {
+                background: transparent;
+                color: $blue;
+                display: block;
+                font-weight: $font-bold;
+                cursor: pointer;
+                margin: 1rem 0;
+                
+            }
+
+            .hide-accorion-btn {
+                display: none;
+            }
+
+
+            // ========= Accorion container.
             .accordion-container {
-                transition: all 0.3s ease-in-out;
                 transform: scale(1, 1);
                 transform-origin: top;
+                transition: all 0.3s ease-in-out;
             }
-    
+
             .accordion-hide {
                 transform: scale(1, 0);
             }

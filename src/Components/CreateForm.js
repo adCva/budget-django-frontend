@@ -40,10 +40,10 @@ function Form() {
 
 
     return (
-        <div className={isAddStarted ? "create-form-wrapper" : "create-form-wrapper hide-create-form-wrapper"}>
+        <div className={isAddStarted ? "form-wrapper" : "form-wrapper form-wrapper-show"}>
             <div className='form-container'>
                 {/* ======================= Form ======================= */}
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="form">
 
                     {/* ======================= Form Group ======================= */}
                     <div className='form-group'>
@@ -75,10 +75,10 @@ function Form() {
                         </select>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" className='submit-btn'>Submit</button>
                 </form>
 
-                <button onClick={() => dispatch(closeAddItemForm())}>Close Form</button>
+                <button onClick={() => dispatch(closeAddItemForm())} className="close-form">Close</button>
             </div>
         </div>
     )

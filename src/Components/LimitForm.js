@@ -30,10 +30,10 @@ function LimitForm() {
     })
 
     return (
-        <div className={isLimitFormStarted ? 'limit-form-wrapper' : 'limit-form-wrapper hide-limit-form-wrapper'}>
+        <div className={isLimitFormStarted ? "form-wrapper" : "form-wrapper form-wrapper-show"}>
             <div className='form-container'>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="form">
 
                     {/* ======================= Form Group ======================= */}
                     <div className='form-group'>

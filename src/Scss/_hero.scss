@@ -4,24 +4,27 @@
     display: flex;
     justify-content: center;
     padding: 1.5rem 0 3rem;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 
     @media (min-width: $tablet-break) {
         padding: 2rem 0 6rem;
     }
 
 
-    // ===================== Container.
+    // ===================== Main Container.
     .hero-container {
         width: 90%;
-        max-width: 1000px;
+        max-width: 900px;
 
 
-        // ===================== Nav.
+        // ===================== Nav Container.
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
+
+            // ========= Logo.
             .logo {
                 font-family: $logo-font;
                 font-size: 1.5rem;
@@ -29,21 +32,21 @@
                 letter-spacing: 1px;
 
                 @media (min-width: $tablet-break) {
-                    font-size: 1.6rem;              
+                    font-size: 1.6rem;
                 }
             }
 
+            // ========= Nav Button.
             button {
                 @extend %button;
                 padding: 0.45rem 1.2rem 0.45rem 0.8rem;
 
                 @media (min-width: $tablet-break) {
-                    padding: 0.55rem 1.3rem 0.55rem 0.9rem;              
+                    padding: 0.55rem 1.3rem 0.55rem 0.9rem;
                 }
 
                 .btn-icon {
                     transition: $transition;
-                    
                 }
 
                 &:hover {
@@ -55,32 +58,24 @@
         }
 
 
-        // ===================== Image & text container.
+        // ===================== Content Container.
         .hero-group {
             display: grid;
             padding: 3.5rem 0 4.5rem;
-            
+
             @media (min-width: $tablet-break) {
                 grid-template-columns: 1fr 1fr;
             }
 
 
-            // ===================== Image.
-            img {
-                width: 100%;
-            }
-
-
-            // ===================== Text container.
+            // ========= Text Container.
             .hero-text {
+                order: 1;
                 margin-top: 2.5rem;
                 text-align: center;
-                order: 1;
 
                 @media (min-width: $tablet-break) {
-                    margin-top: 0;
-                    text-align: left;
-                    order: 0;
+                    all: unset;
                 }
 
 
@@ -91,10 +86,11 @@
                 }
 
 
+                // ========= H1.
                 h1 {
                     display: flex;
-                    align-items: center;
                     justify-content: center;
+                    align-items: center;
                     font-size: 2.5rem;
                     font-weight: $font-bold;
                     letter-spacing: -0.3px;
@@ -104,6 +100,7 @@
                         justify-content: flex-start;
                     }
 
+
                     span {
                         color: $faded-white;
                         font-size: 1.5rem;
@@ -111,7 +108,8 @@
                     }
                 }
 
-                
+
+                // ========= H4.
                 h4 {
                     color: $faded-white;
                     font-size: 1.1rem;
@@ -119,6 +117,8 @@
                     margin-bottom: 0.5rem
                 }
 
+
+                // ========= H5.
                 h5 {
                     color: $faded-white;
                     font-size: 1.1rem;
@@ -126,17 +126,19 @@
                     margin-bottom: 1.5rem
                 }
 
+
+                // ========= Button.
                 button {
                     @extend %button;
                     width: 110px;
                     height: 40px;
-                    margin-top: 0.5rem;
+                    
 
                     .btn-icon {
                         transition: $transition;
-                        
                     }
-    
+
+
                     &:hover {
                         .btn-icon {
                             margin-right: 0.5rem;
@@ -144,7 +146,12 @@
                     }
                 }
             }
-            
+
+
+            // ========= Image.
+            img {
+                width: 100%;
+            }
         }
     }
 }
