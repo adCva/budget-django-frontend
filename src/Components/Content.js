@@ -37,7 +37,7 @@ function Content() {
             </div>
 
             {/* =========== Expenses container =========== */}
-            <div className='expenses-container-'>
+            <div className='expenses-container'>
                 {alwaysDisplay.map((el, i) => {
                   return (
                     <Card key={i} pk={el.id} type={el.type} name={el.name} description={el.desc} spent={el.spent} createdAt={el.created_at} />

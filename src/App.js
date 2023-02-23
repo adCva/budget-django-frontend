@@ -1,8 +1,11 @@
+import React, { Suspense } from 'react';
 import Content from './Components/Content';
 import Hero from './Components/Hero';
-import CreateForm from './Components/CreateForm';
-import EditForm from './Components/EditForm';
 import './Scss/style.css'
+
+const CreateForm = React.lazy(() => import('./Components/CreateForm'));
+const EditForm = React.lazy(() => import('./Components/EditForm'));
+const LimitForm = React.lazy(() => import('./Components/LimitForm'));
 
 function App() {
   return (
@@ -11,8 +14,11 @@ function App() {
         <Hero />
       </header>
       <main>
-        <CreateForm />
-        <EditForm />
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <CreateForm />
+          <EditForm />
+          <LimitForm />
+        </Suspense>
         <Content />
       </main>
     </div>

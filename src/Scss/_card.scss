@@ -1,5 +1,44 @@
 .card-wrapper {
-// test
+    background: $card-gradient;
+    padding: 0.25rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    .card-container {
+        background: $white;
+        padding: 0.5rem;
+        border-radius: 5px;
+
+        @media (min-width: $tablet-break) {
+            display: flex;
+        }
+
+        .type-logo {
+            font-size: 2rem;
+        }
+
+
+        .card-details {
+            margin: 1rem 0;
+
+            .detail-group {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: space-around;
+
+            @media (min-width: $tablet-break) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+    }
 }
 
 .show-card {
@@ -8,4 +47,27 @@
 
 .hide-card {
     display: none;
+}
+
+
+.confirmDelete-wrapper {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    transition: $transition;
+    z-index: 999;
+
+    .confirmDelete-container {
+        background-color: red;
+        display: grid;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+.confirmDelete-wrapper-hide {
+    top: -100%;
 }

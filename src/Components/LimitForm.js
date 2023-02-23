@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { changeLimit, closeForm } from "../Redux/limitSlice";
@@ -25,8 +25,12 @@ function LimitForm() {
         setTimeLimitCheck(event.target.checked)
     }
 
+    useEffect(() => {
+        document.addEventListener('DOMContentLoaded', () => console.log('Limit form loaded'));
+    })
+
     return (
-        <div className={isLimitFormStarted ? 'limit-form-wrapper' : 'hide-limit-form-wrapper'}>
+        <div className={isLimitFormStarted ? 'limit-form-wrapper' : 'limit-form-wrapper hide-limit-form-wrapper'}>
             <div className='form-container'>
 
                 <form onSubmit={handleSubmit}>
@@ -38,7 +42,7 @@ function LimitForm() {
                     </div>
 
                     {/* ======================= Form Group ======================= */}
-                    <div className='form-group'>
+                    <div className='form-group form-group-check'>
                         <label>Set Time Limit</label>
                         <input type="checkbox" onChange={handleCheckboxChange} checked={timeLimitCheck} />
                     </div>
@@ -49,10 +53,10 @@ function LimitForm() {
                         <input type="date" onChange={(e) => setTimeLimit(e.target.value)} />
                     </div>
 
-                    <button type='submit'>Submit</button>
+                    <button type='submit' className='submit-btn'>Submit</button>
                 </form>
 
-                <button onClick={() => dispatch(closeForm())}>Close form</button>
+                <button onClick={() => dispatch(closeForm())} className="close-form">Close form</button>
             </div>
         </div>
     )

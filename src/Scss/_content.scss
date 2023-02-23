@@ -1,13 +1,46 @@
 .content-wrapper {
+    margin-top: 2rem;
+
+    @media (min-width: $tablet-break) {
+        margin-top: -4rem;
+    }
+
+
     .content-container {
-        .accordion-container {
-            transition: all 0.3s ease-in-out;
-            transform: scale(1, 1);
-            transform-origin: top;
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+        
+        .filters-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            button {
+                @extend %button;
+                padding: 0.4rem;
+            }
         }
 
-        .accordion-hide {
-            transform: scale(1, 0);
+        .expenses-container {
+
+        }
+
+        .accordion-wrapper {
+            .accordion-container {
+                transition: all 0.3s ease-in-out;
+                transform: scale(1, 1);
+                transform-origin: top;
+            }
+    
+            .accordion-hide {
+                transform: scale(1, 0);
+            }
         }
     }
 }

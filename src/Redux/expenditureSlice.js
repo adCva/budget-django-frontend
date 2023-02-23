@@ -3,6 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const expenditureSlice = createSlice({
     name: "Limit",
     initialState: {
+        deleteConfirm: false,
+        deleteId: null,
         expData: [
             {
                 id: 1,

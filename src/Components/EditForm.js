@@ -45,7 +45,7 @@ function EditForm() {
 
     
     return (
-        <div className={isEditStarted ? "edit-form-wrapper" : "hide-edit-form-wrapper"}>
+        <div className={isEditStarted ? "edit-form-wrapper" : "edit-form-wrapper hide-edit-form-wrapper"}>
             <div className='form-container'>
 
                 {/* ======================= Form ======================= */}

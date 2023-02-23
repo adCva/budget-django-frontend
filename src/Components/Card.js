@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // ================== Redux.
 import { useSelector, useDispatch } from 'react-redux';
 import { startEdit } from "../Redux/editSlice";
@@ -16,14 +16,15 @@ import { FaRegMoneyBillAlt } from 'react-icons/fa';
 function Card(props) {
     const dispatch = useDispatch();
     const filterBy = useSelector((state) => state.globalVar.filterBy);
+    const [confirmDelete, setConfirmDelete] = useState(false);
 
     
     const typeSymbol = {
-        'Home': <BiHomeSmile />,
-        'Misc': <MdMiscellaneousServices />,
-        'Transport': <MdOutlineEmojiTransportation />,
-        'Food': <MdOutlineFastfood />,
-        'Bills': <FaRegMoneyBillAlt />,
+        'HM': <BiHomeSmile />,
+        'MC': <MdMiscellaneousServices />,
+        'TR': <MdOutlineEmojiTransportation />,
+        'FD': <MdOutlineFastfood />,
+        'BL': <FaRegMoneyBillAlt />,
     }
 
 
@@ -46,6 +47,11 @@ function Card(props) {
         created_at: props.createdAt
     };
 
+
+    const deleteItem = (pk) => {
+        dispatch(deleteData({deleteId: pk}));
+        setConfirmDelete(false);
+    }
 
     
     return (
@@ -81,12 +87,24 @@ function Card(props) {
                 {/* =========== Card buttons, edit & delete =========== */}
                 <div className='card-buttons'>
                     <button onClick={() => dispatch(startEdit({editItem: elementData}))}>Edit</button>
-                    <button onClick={() => dispatch(deleteData({deleteId: props.pk}))}>Delete</button>
+                    <button onClick={() => setConfirmDelete(true)}>Delete</button>
                 </div>
 
             </div>
+
+
         </div>
     )
 }
 
 export default Card;
+
+/*
+            <div className={confirmDelete ? 'confirmDelete-wrapper' : 'confirmDelete-wrapper confirmDelete-wrapper-hide'}>
+                <div className='confirmDelete-container'>
+                    <button onClick={() => deleteItem(props.pk)}>Confirm</button>
+                    <button onClick={() => setConfirmDelete(false)}>Cancel</button>
+                </div>
+            </div>
+
+*/

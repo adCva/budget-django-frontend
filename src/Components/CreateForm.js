@@ -40,7 +40,7 @@ function Form() {
 
 
     return (
-        <div className={isAddStarted ? "create-form-wrapper" : "hide-create-form-wrapper"}>
+        <div className={isAddStarted ? "create-form-wrapper" : "create-form-wrapper hide-create-form-wrapper"}>
             <div className='form-container'>
                 {/* ======================= Form ======================= */}
                 <form onSubmit={handleSubmit}>
