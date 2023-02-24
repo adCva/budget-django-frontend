@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/budget-django-frontend/static/css/main.290f026d.css",
+    "main.css": "/budget-django-frontend/static/css/main.f79ce74b.css",
     "main.js": "/budget-django-frontend/static/js/main.e6a8b58a.js",
     "static/js/588.942b2d68.chunk.js": "/budget-django-frontend/static/js/588.942b2d68.chunk.js",
     "static/js/585.97c989ee.chunk.js": "/budget-django-frontend/static/js/585.97c989ee.chunk.js",
     "static/js/460.76d15c74.chunk.js": "/budget-django-frontend/static/js/460.76d15c74.chunk.js",
     "index.html": "/budget-django-frontend/index.html",
-    "main.290f026d.css.map": "/budget-django-frontend/static/css/main.290f026d.css.map",
+    "main.f79ce74b.css.map": "/budget-django-frontend/static/css/main.f79ce74b.css.map",
     "main.e6a8b58a.js.map": "/budget-django-frontend/static/js/main.e6a8b58a.js.map",
     "588.942b2d68.chunk.js.map": "/budget-django-frontend/static/js/588.942b2d68.chunk.js.map",
     "585.97c989ee.chunk.js.map": "/budget-django-frontend/static/js/585.97c989ee.chunk.js.map",
     "460.76d15c74.chunk.js.map": "/budget-django-frontend/static/js/460.76d15c74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.290f026d.css",
+    "static/css/main.f79ce74b.css",
     "static/js/main.e6a8b58a.js"
   ]
 }
