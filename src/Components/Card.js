@@ -5,9 +5,7 @@ import { startEdit } from "../Redux/editSlice";
 import { deleteData } from "../Redux/expenditureSlice";
 // ================== React icons.
 import { MdOutlineEmojiTransportation, MdDelete } from "react-icons/md";
-import { MdOutlineDriveFileRenameOutline, MdOutlineDescription, MdMiscellaneousServices, MdOutlineFastfood } from 'react-icons/md';
-import { BsTypeStrikethrough } from 'react-icons/bs';
-import { GiReceiveMoney } from 'react-icons/gi';
+import { MdMiscellaneousServices, MdOutlineFastfood } from 'react-icons/md';
 import { BiHomeSmile } from 'react-icons/bi';
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { FiEdit } from 'react-icons/fi';
@@ -75,7 +73,6 @@ function Card(props) {
                 </div>
 
             </div>
-
 
             <div className={confirmDelete ? "form-wrapper" : "form-wrapper form-wrapper-show"}>
                 <div className='form-container'>

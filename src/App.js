@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import Content from './Components/Content';
+import Greet from './Components/Greet';
 import Hero from './Components/Hero';
 import './Scss/style.css'
 
@@ -20,6 +21,7 @@ function App() {
           <LimitForm />
         </Suspense>
         <Content />
+        <Greet />
       </main>
     </div>
   );
