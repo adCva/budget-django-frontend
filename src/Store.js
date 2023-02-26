@@ -10,7 +10,6 @@ export default configureStore({
         expenditures: expenditureSlice,
         limit: limitSlice,
         globalVar: globalVarSlice,
-        edit: editSlice,
-
+        edit: editSlice
     }
 })
